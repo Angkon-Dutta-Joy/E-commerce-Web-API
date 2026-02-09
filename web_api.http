@@ -1,6 +1,38 @@
-@web_api_HostAddress = http://localhost:5105
 
-GET {{web_api_HostAddress}}/weatherforecast/
-Accept: application/json
+GET http http://localhost:5105/
 
 ###
+
+GET http://localhost:5105/products
+
+###
+
+GET http://localhost:5105/api/categories
+
+###
+
+GET http://localhost:5105/api/categories?searchValue=Electorics
+
+###
+
+POST http://localhost:5105/api/categories
+Content-Type: application/json
+
+{
+  "Name" : "Electorics",
+  "Description" : "new category"
+}
+
+###
+
+DELETE http://localhost:5105/api/categories/8ef3d3ed-0b0a-4db4-959a-dde823aa1dd4
+
+###
+
+PUT http://localhost:5105/api/categories/b8b60c31-dc63-4bdd-8b99-e1de7c92972f
+Content-Type: application/json
+
+{
+  "Name" : "Electorics2",
+  "Description" : "mobiles,laptops etc.2"
+}
